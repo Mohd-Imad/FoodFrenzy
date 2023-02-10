@@ -1,0 +1,35 @@
+.form-container{
+    width: 97%;
+    border: 1px solid #7e7e7e;
+    border-radius: 7px;
+    margin: auto;
+}
+
+.login-form{
+    padding: 0.5rem;
+}
+
+.form-content{
+    /* width: 97%; */
+    margin:1rem;
+    padding: auto;
+}
+
+.form-input{
+    width: 100%;
+    min-height: 70px;
+    border: 0.5px solid #ddd6d6;
+    border-radius: 12px;
+}
+
+.submit-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+.login-btn{
+    width: auto;
+}
