@@ -25,15 +25,21 @@
     padding: auto;
 }
 
-.form-input{
+.name-wrapper{
     width: 100%;
-    min-height: 70px;
-    border: 0.5px solid #ddd6d6;
-    border-radius: 12px;
+    display: flex;
+    justify-content: center;
 }
 
-.form-input::-moz-focus-inner{
-    border:none;
+.name-cols{
+    width: 50%;
+}
+
+.form-input{
+    width: 100%;
+    min-height: 55px;
+    border: 0.5px solid #ddd6d6;
+    border-radius: 12px;
 }
 
 .submit-form-cont{
@@ -42,6 +48,10 @@
     align-items: flex-start;
     justify-content: space-evenly;
     margin: 1rem;
+}
+
+.terms-wrapper{
+    margin: 1rem 0;
 }
 
 .login-btn{
@@ -61,12 +71,13 @@
     cursor: pointer;
 }
 
-.lost-password{
+.exist-account-msg, .navigate{
     color: #3bb77e;
     padding-top: 1rem;
+    text-decoration: none;
 }
 
-.lost-password:hover{
-    color: #fdc040;
+.navigate:hover{
     cursor: pointer;
+    color: #fdc040;
 }
