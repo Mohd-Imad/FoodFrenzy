@@ -13,13 +13,13 @@ const Register = () => {
     email: '',
     password: '',
     re_password: '',
-    checkbox : false
+    checkbox: false
   })
   const [errors, setErrors] = useState({})
-const [refresh,setRefresh]=useState(false)
+  const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
-    if(refresh){ setErrors(validation(values))}
+    if (refresh) { setErrors(validation(values)) }
   }, [values])
 
 
@@ -32,7 +32,7 @@ const [refresh,setRefresh]=useState(false)
     e.preventDefault()
     setErrors(validation(values))
     let url = 'http://127.23.23.43:8000/user/register'
-    let allValues = values.fname !="" && values.mobile !="" && values.email !="" && values.password !="" && values.re_password !=""
+    let allValues = values.fname != "" && values.mobile != "" && values.email != "" && values.password != "" && values.re_password != ""
     console.log(allValues)
     if (Object.keys(errors).length === 0 && !allValues) {
       Axios.post(url, values).then((resp) => {
@@ -81,10 +81,10 @@ const [refresh,setRefresh]=useState(false)
           </div>
           <div className="submit-register-cont">
             <div className="terms-wrapper">
-              <input type="checkbox" className='checkbox'onChange={()=>{setValues({...values,checkbox:!values.checkbox})}}/> <span className='terms-msg' >I accept all terms & conditions</span>
-              <span style={{ color: 'red', marginLeft:'20px' }}>{errors.checkbox}</span>
+              <input type="checkbox" className='checkbox' onChange={() => { setValues({ ...values, checkbox: !values.checkbox }) }} /> <span className='terms-msg' >I accept all terms & conditions</span>
+              <span style={{ color: 'red', marginLeft: '20px' }}>{errors.checkbox}</span>
             </div>
-          
+
             <input type="submit" value='Register' className='register-btn' />
             <span className="exist-account-msg">Already have an account? <Link to='/Login' className='navigate'>Login</Link></span>
           </div>

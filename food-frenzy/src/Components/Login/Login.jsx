@@ -1,29 +1,35 @@
 import React, { useEffect, useState } from 'react'
 import './Login.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import validation from './LoginValidation'
 
 
 const Login = () => {
     const [values, setValues] = useState({
-        username : '',
-        password : ''
+        username: '',
+        password: ''
     })
-    const [errors,setErrors] = useState({})
+    const [errors, setErrors] = useState({})
+    const [refresh, setRefresh] = useState(false)
 
-    useEffect(()=>{
-        if(Object.keys(errors).length === 0 && values.username!='' && values.password!=''){
-           alert('Form submitted')
-        }
-    },[errors])
 
-    const changeHandler = (e)=>{
-        setValues({...values,[e.target.name]:e.target.value})
+    useEffect(() => {
+        if (refresh) { setErrors(validation(values)) }
+    }, [values])
+
+    const changeHandler = (e) => {
+        setValues({ ...values, [e.target.name]: e.target.value })
     }
 
-    const loginHandler = (e)=>{
+    const loginHandler = (e) => {
+        setRefresh(true)
         e.preventDefault()
         setErrors(validation(values))
+        let allValues = values.username != "" && values.password != ""
+        console.log(allValues)
+        if (Object.keys(errors).length === 0 && !allValues) {
+            console.log(values)
+        }
     }
 
     return <>
@@ -34,12 +40,12 @@ const Login = () => {
                     <div className="login-content">
                         <label className='login-label'>Username or email address <span style={{ color: 'red' }}>*</span></label>
                         <input type="text" name='username' value={values.username} className='login-input' onChange={changeHandler} />
-                        <p style={{color:'red'}}>{errors.username}</p>
+                        <p style={{ color: 'red' }}>{errors.username}</p>
                     </div>
                     <div className="login-content">
                         <label className='login-label'>Password <span style={{ color: 'red' }}>*</span></label>
-                        <input type="password" name='password' value={values.password} className='login-input' onChange={changeHandler}  />
-                        <p style={{color:'red'}}>{errors.password}</p>
+                        <input type="password" name='password' value={values.password} className='login-input' onChange={changeHandler} />
+                        <p style={{ color: 'red' }}>{errors.password}</p>
                     </div>
                     <div className="submit-form-cont">
                         <input type="submit" value='Log in' className='login-btn' />
