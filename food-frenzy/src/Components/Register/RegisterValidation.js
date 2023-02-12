@@ -24,8 +24,7 @@ const validation = (values) => {
     else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email)) {
         errors.email = "Invalid Email ID"
     }
-
-    
+  
     //password
     if (!values.password) {
         errors.password = "Password is required"
