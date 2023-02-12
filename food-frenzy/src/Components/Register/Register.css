@@ -43,6 +43,11 @@
     min-height: 55px;
     border: 0.5px solid #ddd6d6;
     border-radius: 12px;
+    padding: 0 1rem;
+}
+
+.register-input:focus{
+    outline: none;
 }
 
 .submit-register-cont{

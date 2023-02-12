@@ -1,38 +1,71 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import './Register.css'
 import {Link} from 'react-router-dom'
+import validation from './RegisterValidation'
 
 const Register = () => {
+  
+  const [values, setValues] = useState({
+    fname : '',
+    lname : '',
+    mobile : '',
+    email : '',
+    password : '',
+    re_password : ''
+  })
+  const [errors, setErrors] = useState({})
+
+  useEffect(()=>{
+    let allValues = values.fname && values.mobile && values.email && values.password && values.re_password
+    if(Object.keys(errors).length === 0 && !allValues == ''){
+       alert('Form submitted')
+    }
+},[errors])
+
+  const changeHandler = (e)=>{
+    setValues({...values,[e.target.name]:e.target.value})
+  }
+
+  const RegisterHandler = (e)=>{
+    e.preventDefault()
+    setErrors(validation(values))
+  }
+
   return <>
     <div className='Register-page-wrapper'>
       <h1 className='register-heading'>Registration</h1>
       <div className="register-container">
-        <form className='register-form'>
+        <form onSubmit={RegisterHandler} className='register-form'>
           <div className="register-content name-wrapper">
             <div className="name-cols">
               <label className='register-label'>FirstName <span style={{ color: 'red' }}>*</span></label>
-              <input type="text" className='register-input' />
+              <input type="text" name='fname' value={values.fname} className='register-input' onChange={changeHandler} />
+              <p style={{color:'red'}}>{errors.fname}</p>
             </div>
             <div className="name-cols">
               <label className='register-label'>LastName (optional)</label>
-              <input type="text" className='register-input' />
+              <input type="text" name='lname' value={values.lname} className='register-input' onChange={changeHandler} />
             </div>
           </div>
           <div className="register-content">
             <label className='register-label'>Mobile Number <span style={{ color: 'red' }}>*</span></label>
-            <input type="text" className='register-input' />
+            <input type="number" name='mobile' value={values.mobile} className='register-input' onChange={changeHandler} />
+            <p style={{color:'red'}}>{errors.mobile}</p>
           </div>
           <div className="register-content">
             <label className='register-label'>Email ID <span style={{ color: 'red' }}>*</span></label>
-            <input type="text" className='register-input' />
+            <input type="text" name='email' value={values.email} className='register-input' onChange={changeHandler} />
+            <p style={{color:'red'}}>{errors.email}</p>
           </div>
           <div className="register-content">
             <label className='register-label'>Password <span style={{ color: 'red' }}>*</span></label>
-            <input type="password" className='register-input' />
+            <input type="password" name='password' value={values.password} className='register-input' onChange={changeHandler} />
+            <p style={{color:'red'}}>{errors.password}</p>
           </div>
           <div className="register-content">
             <label className='register-label'>Confirm Password <span style={{ color: 'red' }}>*</span></label>
-            <input type="password" className='register-input' />
+            <input type="password" name='re_password' value={values.re_password} className='register-input' onChange={changeHandler} />
+            <p style={{color:'red'}}>{errors.re_password}</p>
           </div>
           <div className="submit-register-cont">
             <div className="terms-wrapper">
