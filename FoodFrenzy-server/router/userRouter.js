@@ -1,5 +1,5 @@
 import express from "express";
-import User from "../model/User.js.js";
+import User from "../model/User.js";
 let router = express.Router();
 
 //get all users
@@ -26,11 +26,13 @@ required field : name,email,password
 router.post("/register", async (request, response) => {
   try {
     let newUser = {
-      name: request.body.name,
+      fname: request.body.fname,
+      lname: request.body.lname,
+      mobile: request.body.mobile,
       email: request.body.email,
       password: request.body.password
     }
-    let user=await User.findOne({name:newUser.name})
+    let user=await User.findOne({name:newUser.fname})
         if(user){
            return response.status(404).json({
                 msg:"Product already exist...!"
@@ -81,7 +83,9 @@ router.put("/:id",async(request,response)=>{
   let user_ID=request.params.id
      try{
        const updatedUser={
-        name: request.body.name,
+        fname: request.body.fname,
+        lname: request.body.lname,
+        mobile: request.body.mobile,
         email: request.body.email,
         password: request.body.password
        }

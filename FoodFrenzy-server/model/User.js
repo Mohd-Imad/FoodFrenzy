@@ -3,8 +3,16 @@ import mongoose from "mongoose";
 let userSchema = mongoose.Schema;
 
 let schema = new userSchema({
-  name: {
+  fname: {
     type: String,
+    required: true,
+  },
+  lname: {
+    type: String,
+    required: false,
+  },
+  mobile: {
+    type: Number,
     required: true,
   },
   email: {
