@@ -1,0 +1,40 @@
+
+//Register users
+/*
+URL            : http://127.23.23.43:8000/user/register
+method         : POST
+required field : name,email,password
+*/
+********************************************************
+//get all users
+/*
+URL            : http://127.23.23.43:8000/user/all
+method         : GET
+required field : N/A
+*/
+********************************************************
+
+//get single users
+/*
+URL            : http://127.23.23.43:8000/user/:id
+method         : GET
+required field : N/A
+*/
+********************************************************
+
+//Update user / edit user
+/*
+URL            : http://127.23.23.43:8000/user/:id
+method         : PUT
+required field : name,email,password
+*/
+********************************************************
+
+// Delete user
+/*
+URL            : http://127.23.23.43:8000/user/:id
+method         : DELETE
+required field : name,email,password
+*/
+
+********************************************************
