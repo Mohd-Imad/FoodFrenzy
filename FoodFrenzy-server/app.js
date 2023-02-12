@@ -35,7 +35,9 @@ app.use(cors()) ;   //to implement the cross origin resourse sharing to enable c
 app.use(morgan('tiny'))  //http logger
 app.use(express.json()) //to read form data
 app.use(express.urlencoded({extended:false}))
+
 // ***********************MongoDB*******************************
+
 mongoose.set('strictQuery', false);
 console.log(mongoUrl);
 mongoose.connect(mongoUrl)
@@ -51,7 +53,9 @@ mongoose.connect(mongoUrl)
 app.get('/',(request,response)=>{
    response.send('<h1>server is running successfully</h1>')
 })
+
 app.use('/user',userRouter)
+
 app.listen(port,hostName,(err)=>{
     if(err)throw err
    console.log(chalk.red(`server is listening to http://${hostName}:${port}`));
