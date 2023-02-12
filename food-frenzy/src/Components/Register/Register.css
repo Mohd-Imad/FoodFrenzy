@@ -29,13 +29,26 @@
 
 .name-wrapper{
     display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
+    /* justify-content: space-between; */
+    flex-flow: column nowrap;
 
 }
 
 .name-cols{
-    width: 49%;
+    width: 100%;
+}
+
+@media screen and (min-width:576px){
+    .name-wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    
+    }
+    
+    .name-cols{
+        width: 49%;
+    } 
 }
 
 .register-input{
@@ -88,3 +101,4 @@
     cursor: pointer;
     color: #fdc040;
 }
+

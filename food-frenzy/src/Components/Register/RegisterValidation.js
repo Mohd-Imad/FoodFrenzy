@@ -50,6 +50,11 @@ const validation = (values) => {
         errors.re_password = "Password does not match"
     }
 
+    //checkbox
+    if(!values.checkbox){
+        errors.checkbox = "Accept terms to register"
+    }
+
     return errors
 }
 
