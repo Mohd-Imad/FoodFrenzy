@@ -1,5 +1,5 @@
 import express from "express";
-import User from "../model/User.js.js";
+import User from "../model/User.js";
 let router = express.Router();
 
 //get all users

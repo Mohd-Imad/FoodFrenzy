@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import './Register.css'
 import {Link} from 'react-router-dom'
 import validation from './RegisterValidation'
+import Axios from 'axios'
 
 const Register = () => {
   
@@ -18,7 +19,11 @@ const Register = () => {
   useEffect(()=>{
     let allValues = values.fname && values.mobile && values.email && values.password && values.re_password
     if(Object.keys(errors).length === 0 && !allValues == ''){
-       alert('Form submitted')
+      let url = 'http://127.23.23.43:8000/user/register'
+      Axios.post(url,values).then((resp)=>{
+         console.log(resp)
+       })
+       .catch(()=>{})
     }
 },[errors])
 
