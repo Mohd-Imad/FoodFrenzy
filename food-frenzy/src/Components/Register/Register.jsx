@@ -82,7 +82,7 @@ const [refresh,setRefresh]=useState(false)
           <div className="submit-register-cont">
             <div className="terms-wrapper">
               <input type="checkbox" className='checkbox'onChange={()=>{setValues({...values,checkbox:!values.checkbox})}}/> <span className='terms-msg' >I accept all terms & conditions</span>
-              <span style={{ color: 'red' }}>{errors.checkbox}</span>
+              <span style={{ color: 'red', marginLeft:'20px' }}>{errors.checkbox}</span>
             </div>
           
             <input type="submit" value='Register' className='register-btn' />
