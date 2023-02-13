@@ -6,6 +6,7 @@ import dotenv from 'dotenv'
 import chalk from 'chalk'
 import morgan from 'morgan'
 import userRouter from './router/userRouter.js'
+import productRouter from './router/productRouter.js'
 import mongoose from 'mongoose'
 
 // ************** config settings ********************************
@@ -55,6 +56,7 @@ app.get('/',(request,response)=>{
 })
 
 app.use('/user',userRouter)
+app.use('/product',productRouter)
 
 app.listen(port,hostName,(err)=>{
     if(err)throw err
