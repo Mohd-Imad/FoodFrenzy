@@ -25,7 +25,7 @@ const Login = () => {
         setRefresh(true)
         e.preventDefault()
         setErrors(validation(values))
-        let allValues = values.username != "" && values.password != ""
+        let allValues = values.username !== "" && values.password !== ""
         console.log(allValues)
         if (Object.keys(errors).length === 0 && !allValues) {
             console.log(values)

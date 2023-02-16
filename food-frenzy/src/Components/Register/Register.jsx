@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Register.css'
 import { Link } from 'react-router-dom'
 import validation from './RegisterValidation'
@@ -32,7 +32,7 @@ const Register = () => {
     e.preventDefault()
     setErrors(validation(values))
     let url = 'http://127.23.23.43:8000/user/register'
-    let allValues = values.fname != "" && values.mobile != "" && values.email != "" && values.password != "" && values.re_password != ""
+    let allValues = values.fname !== "" && values.mobile !== "" && values.email !== "" && values.password !== "" && values.re_password !== ""
     console.log(allValues)
     if (Object.keys(errors).length === 0 && !allValues) {
       Axios.post(url, values).then((resp) => {
