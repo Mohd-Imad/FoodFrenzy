@@ -8,7 +8,7 @@ const ShowPopup = ({ closeModal}) => {
     return <>
         <div className="modal-wrapper">
             <div className="modal-container">
-                {/* <Login closeModal={closeModal} /> */}
+                <Login closeModal={closeModal} />
                 <Register closeModal={closeModal} />
             </div>
         </div>

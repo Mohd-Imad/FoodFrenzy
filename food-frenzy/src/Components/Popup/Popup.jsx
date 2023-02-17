@@ -9,9 +9,10 @@ const Popup = () => {
   const closeModal = () => setModal(false)
 
   return <>
-    <button onClick={() => { setModal(true) }}>Open Modal</button>
+    <button onClick={() => { setModal(true) }}
+      style={{ backgroundColor: '#253d4e', padding: '0.5rem', color: '#fff', borderRadius: '10px',margin:'auto'}}>Open Modal</button>
     {
-      modal ? <ShowPopup closeModal={closeModal} /> : null
+      modal ? <><ShowPopup closeModal={closeModal} /></> : null
     }
   </>
 }
