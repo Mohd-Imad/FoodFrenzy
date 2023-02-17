@@ -1,3 +1,10 @@
+.login-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+
 .login-heading{
     color: #253d4e;
     font-size: 40px;
@@ -7,10 +14,12 @@
     font-weight: 800;
 }
 .login-container{
+    position: relative;
     width: 97%;
     border: 1px solid #7e7e7e;
     border-radius: 7px;
     margin: auto;
+    margin-bottom: 2rem;
     color: #7e7e7e;
     font-family: 'Lato', sans-serif;
 }
@@ -21,7 +30,7 @@
 
 .login-content{
     /* width: 97%; */
-    margin:1rem;
+    margin:1.5rem;
     padding: auto;
 }
 
@@ -31,6 +40,7 @@
     border: 0.5px solid #ddd6d6;
     border-radius: 12px;
     padding: 0 1rem;
+    margin-top: 0.3rem;
 }
 
 .login-input:focus{

@@ -6,8 +6,26 @@
 }
 
 .modal-container{
+    margin: auto;
+    position: relative;
     width: 90%;
-    background-color: rgb(220, 222, 222);
     border-radius: 10px;
-    padding: 2rem 1rem;
+    box-shadow: 3px 1px 10px #000;
+}
+
+.close-container{
+    color: #253d4e;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.close-icon{
+    padding: 0.5rem;
+
+}
+
+.close-icon:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #000;
 }
