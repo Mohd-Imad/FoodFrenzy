@@ -13,14 +13,11 @@
     box-shadow: 3px 1px 10px #000;
 }
 
-.close-container{
-    color: #253d4e;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 .close-icon{
+    position: absolute;
+    font-size: large;
+    right: 1.5rem;
+    top:2rem;
     padding: 0.5rem;
 
 }
