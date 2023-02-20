@@ -1,6 +1,7 @@
 import { useState } from "react"
 import React from "react"
 import ShowPopup from "./ShowPopup"
+import Register from "../Register/Register"
 
 const Popup = () => {
 
@@ -11,8 +12,14 @@ const Popup = () => {
   return <>
     <button onClick={() => { setModal(true) }}
       style={{ backgroundColor: '#253d4e', padding: '0.5rem', color: '#fff', borderRadius: '10px',margin:'auto'}}>Open Modal</button>
+      
     {
-      modal ? <><ShowPopup closeModal={closeModal} /></> : null
+      modal ? <><div className="modal-wrapper">
+      <div className="modal-container">
+          {/* <Login closeModal={closeModal} /> */}
+          <Register closeModal={closeModal} />
+      </div>
+  </div></> : null
     }
   </>
 }
