@@ -1,10 +1,9 @@
-import React,{useState} from 'react'
+import React from 'react'
+import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
-import './App.css'
 import ResetPassword from './Components/Login/ResetPassword/ResetPassword'
-// import Popup from './Components/Popup/Popup'
 import Popup from './Components/HOC Components/Popup/Popup'
 import Home from './Components/HomePage/Home'
 

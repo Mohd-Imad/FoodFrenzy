@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
 import validation from './LoginValidation'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 
-const Login = ({ closeModal }) => {
+const Login = () => {
     const [values, setValues] = useState({
         username: '',
         password: ''
@@ -38,7 +36,6 @@ const Login = ({ closeModal }) => {
         <div className='Login-page-wrapper'>
             <div className='login-header'>
                 <h1 className='login-heading'>Login</h1>
-                {/* <FontAwesomeIcon icon={faClose} className='close-icon' onClick={()=>{closeModal()}} /> */}
             </div>
             <div className="login-container">
                 <form onSubmit={loginHandler} className='login-form'>

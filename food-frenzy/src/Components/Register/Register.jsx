@@ -3,10 +3,8 @@ import './Register.css'
 import { Link } from 'react-router-dom'
 import validation from './RegisterValidation'
 import Axios from 'axios'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClose } from '@fortawesome/free-solid-svg-icons'
 
-const Register = ({ closeModal }) => {
+const Register = () => {
 
   const [values, setValues] = useState({
     fname: '',
@@ -48,7 +46,6 @@ const Register = ({ closeModal }) => {
     <div className='Register-page-wrapper'>
       <div className='register-header'>
       <h1 className='register-heading'>Registration</h1>
-        {/* <FontAwesomeIcon icon={faClose} className='close-icon' onClick={()=>{closeModal()}} /> */}
       </div>
       <div className="register-container">
         <form onSubmit={RegisterHandler} className='register-form'>
