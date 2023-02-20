@@ -52,7 +52,7 @@ const Login = ({ closeModal }) => {
                     <div className="submit-form-cont">
                         <input type="submit" value='Log in' className='login-btn' />
                         <Link to='/reset' className="lost-password">Lost your password?</Link>
-                        <span className="exist-account-msg">Don't have an account? <Link to='/' className='navigate'>Register</Link></span>
+                        <span className="exist-account-msg">Don't have an account? <Link to='/register' className='navigate'>Register</Link></span>
                     </div>
                 </form>
             </div>

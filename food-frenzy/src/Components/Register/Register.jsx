@@ -90,7 +90,7 @@ const Register = ({ closeModal }) => {
             </div>
 
             <input type="submit" value='Register' className='register-btn' />
-            <span className="exist-account-msg">Already have an account? <Link to='/Login' className='navigate'>Login</Link></span>
+            <span className="exist-account-msg">Already have an account? <Link to='/login' className='navigate'>Login</Link></span>
           </div>
         </form>
       </div>

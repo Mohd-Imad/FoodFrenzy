@@ -6,6 +6,7 @@ import './App.css'
 import ResetPassword from './Components/Login/ResetPassword/ResetPassword'
 // import Popup from './Components/Popup/Popup'
 import Popup from './Components/HOC Components/Popup'
+import Home from './Components/HomePage/Home'
 
 const App = () => {
 
@@ -14,10 +15,11 @@ const App = () => {
   let ResetPasswordComponent=Popup(ResetPassword)
   return <>
     <Router>
+    <Home />
       <Routes>
-        <Route path='/Login' element={<LoginComponent />} />
+        <Route path='/login' element={<LoginComponent />} />
         <Route path='/reset' element={<ResetPasswordComponent />} />
-        <Route path='/' element={<RegisterComponent />} />
+        <Route path='/register' element={<RegisterComponent />} />
       </Routes>
     </Router>
   </>
