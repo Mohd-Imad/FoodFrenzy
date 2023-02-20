@@ -8,7 +8,7 @@
 .register-heading{
     color: #253d4e;
     font-size: 40px;
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 0.5rem;
     font-family:'Quicksand',sans-serif ;
     font-weight: 800;
@@ -26,7 +26,7 @@
 }
 
 .register-form{
-    padding: 0.5rem;
+    padding:0 0.2rem;
 }
 
 .register-content{
@@ -61,7 +61,7 @@
 
 .register-input{
     width: 100%;
-    min-height: 55px;
+    min-height: 50px;
     border: 0.5px solid #ddd6d6;
     border-radius: 12px;
     padding: 0 1rem;

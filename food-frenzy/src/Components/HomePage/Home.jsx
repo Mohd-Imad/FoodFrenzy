@@ -1,11 +1,12 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
-  return <>
-    <h1>Home</h1>
-    <Link to='/register'>Open Popup</Link>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est error iste repudiandae tempore id alias cum voluptatem quod, quis inventore? Itaque voluptatibus tenetur aliquam in porro pariatur architecto dicta libero!
+    return <>
+        {/* <h1>Home</h1> */}
+        <Link to='/register'
+            style={{ border: '2px solid black', padding: '1rem', backgroundColor: '#253d4e', color: '#fff', textDecoration: 'none',marginTop:'2rem' }}>Open Popup</Link>
+        {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est error iste repudiandae tempore id alias cum voluptatem quod, quis inventore? Itaque voluptatibus tenetur aliquam in porro pariatur architecto dicta libero!
     Error asperiores explicabo eaque amet at veniam nisi exercitationem voluptates fugit rem, laborum repellendus, dicta alias officia porro quae ullam molestias deserunt. Amet, rerum? Eius nemo nobis similique repellat reprehenderit?
     Debitis minima amet corrupti vitae, aliquam, possimus quam at voluptas doloribus atque dignissimos eveniet corporis modi aspernatur reiciendis tempora cupiditate voluptates beatae aut, dolor molestias quasi provident. Fugiat, totam tenetur.
     Consequuntur voluptates dolor dolorum dolores exercitationem beatae, pariatur aut quo minima omnis aliquid ad tempora quisquam. Eos accusamus itaque a quam, velit voluptatum vitae nihil, omnis veritatis deleniti officiis illum?
@@ -55,8 +56,8 @@ const Home = () => {
     Dignissimos quo minus nam doloremque iste vero, minima dolorum ipsam neque placeat magni libero nemo fugiat impedit ratione debitis itaque reiciendis laboriosam omnis aut vitae perspiciatis tempore. Id, blanditiis temporibus.
     Veniam soluta excepturi est magnam quasi omnis ea eveniet ipsam, tempore culpa quia nostrum exercitationem deserunt blanditiis corporis rerum quisquam esse repudiandae officia placeat. Optio, minima voluptas! Odit, debitis quo!
     Laboriosam distinctio, quos pariatur reprehenderit eveniet sunt. Ipsa odit eaque eos dignissimos quas distinctio, ipsam consequatur iste? Ab vero, recusandae pariatur magnam tempora, quos numquam quis in, repellat cupiditate dolorum.</p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam modi placeat odit quas reiciendis quia nisi perferendis, similique maxime, aut, doloribus fugit soluta. Aliquam, culpa quo maiores beatae numquam dolorem.
-  </>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam modi placeat odit quas reiciendis quia nisi perferendis, similique maxime, aut, doloribus fugit soluta. Aliquam, culpa quo maiores beatae numquam dolorem. */}
+    </>
 }
 
 export default Home
