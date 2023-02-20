@@ -1,8 +1,12 @@
 .modal-wrapper{
     height: 95vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+   
+    z-index: 2;
+    top: 2rem;
 }
 
 .modal-container{
@@ -19,7 +23,6 @@
     right: 1.5rem;
     top:2rem;
     padding: 0.5rem;
-
 }
 
 .close-icon:hover{

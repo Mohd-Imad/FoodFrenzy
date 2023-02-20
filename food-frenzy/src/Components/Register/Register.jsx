@@ -48,7 +48,7 @@ const Register = ({ closeModal }) => {
     <div className='Register-page-wrapper'>
       <div className='register-header'>
       <h1 className='register-heading'>Registration</h1>
-        {/* <FontAwesomeIcon icon={faClose} className='close-icon' onClick={closeModal} /> */}
+        {/* <FontAwesomeIcon icon={faClose} className='close-icon' onClick={()=>{closeModal()}} /> */}
       </div>
       <div className="register-container">
         <form onSubmit={RegisterHandler} className='register-form'>
