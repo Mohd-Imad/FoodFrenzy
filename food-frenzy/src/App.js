@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Login from './Components/Login/Login'
-import Register from './Components/Register/Register'
-import ResetPassword from './Components/Login/ResetPassword/ResetPassword'
-import Popup from './Components/HOC Components/Popup/Popup'
-import Home from './Components/HomePage/Home'
+import Login from './Pages/Login/Login'
+import Register from './Pages/Register/Register'
+import ResetPassword from './Pages/Login/ResetPassword/ResetPassword'
+import Popup from './Pages/HOC Components/Popup/Popup'
+import Home from './Pages/HomePage/Home'
 
 const App = () => {
 

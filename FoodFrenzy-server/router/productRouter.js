@@ -120,3 +120,5 @@ router.delete('/:id',async(request,response)=>{
       }
       catch(error){console.log(error);}
 })
+
+export default router
